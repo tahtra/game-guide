@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
+import { TuiRootModule, TuiDialogModule, TuiAlertModule, TUI_SANITIZER } from "@taiga-ui/core";
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
+import {HeaderComponent, SidebarComponent} from '@widgets';
+
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+	selector: 'app-root',
+	standalone: true,
+	imports: [CommonModule, RouterOutlet, HeaderComponent, SidebarComponent, TuiRootModule, TuiDialogModule, TuiAlertModule],
+	templateUrl: './app.component.html',
+    providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}]
 })
 export class AppComponent {
-  title = 'games-guide';
+	sidebarHide: boolean = true;
 }

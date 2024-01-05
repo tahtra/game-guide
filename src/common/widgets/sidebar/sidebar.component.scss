@@ -1,0 +1,15 @@
+:host {
+	overflow:         hidden;
+	z-index:          10;
+	position:         fixed;
+	top:              var(--header-height);
+	bottom:           0;
+	width:            var(--sidebar-width);
+	background-color: var(--sidebar-bg-color);
+	box-shadow:       0 0 20px 0 #000000;
+	transition:       all 1s ease;
+
+	&.hide {
+		width: 0;
+	}
+}

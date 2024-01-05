@@ -5,7 +5,19 @@
 	"projects": {
 		"games-guide": {
 			"projectType": "application",
-			"schematics": {},
+			"schematics": {
+				"@schematics/angular:component": {
+					"skipTests": true,
+					"style": "scss",
+					"standalone": true
+				},
+				"@schematics/angular:application": {
+					"skipTests": true,
+					"strict": true,
+					"standalone": true,
+					"style": "scss"
+				}
+			},
 			"root": "",
 			"sourceRoot": "src",
 			"prefix": "app",
@@ -19,13 +31,20 @@
 						"polyfills": [
 							"zone.js"
 						],
-						"tsConfig": "tsconfig.app.json",
+						"tsConfig": "tsconfig.json",
 						"assets": [
 							"src/favicon.ico",
-							"src/assets"
+							"src/assets",
+							{
+								"glob": "**/*",
+								"input": "node_modules/@taiga-ui/icons/src",
+								"output": "assets/taiga-ui/icons"
+							}
 						],
 						"styles": [
-							"src/styles.css"
+							"node_modules/@taiga-ui/core/styles/taiga-ui-theme.less",
+							"node_modules/@taiga-ui/core/styles/taiga-ui-fonts.less",
+							"src/styles/app.scss"
 						],
 						"scripts": []
 					},
@@ -64,30 +83,6 @@
 						}
 					},
 					"defaultConfiguration": "development"
-				},
-				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"buildTarget": "games-guide:build"
-					}
-				},
-				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
-					"options": {
-						"polyfills": [
-							"zone.js",
-							"zone.js/testing"
-						],
-						"tsConfig": "tsconfig.spec.json",
-						"assets": [
-							"src/favicon.ico",
-							"src/assets"
-						],
-						"styles": [
-							"src/styles.css"
-						],
-						"scripts": []
-					}
 				}
 			}
 		}
