@@ -1,5 +1,11 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+	"files": [
+		"src/main.ts"
+	],
+	"include": [
+		"src/**/*.d.ts"
+	],
 	"compileOnSave": false,
 	"compilerOptions": {
 		"outDir": "./dist/out-tsc",
@@ -34,8 +40,5 @@
 		"strictInjectionParameters": true,
 		"strictInputAccessModifiers": true,
 		"strictTemplates": true
-	},
-	"files": [
-		"src/main.ts"
-	]
+	}
 }
