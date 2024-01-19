@@ -1,4 +1,5 @@
 import {Routes} from '@angular/router';
+import {GamesComponent} from '../../games.component';
 import {AgainstTheStormComponent} from './against-the-storm.component';
 
 
@@ -6,6 +7,9 @@ export const againstTheStormRoutes: Routes = [
 	{
 		path: 'against-the-storm',
 		component: AgainstTheStormComponent,
+	},
+	{
+		path: 'against-the-storm',
 		title: 'Against The Storm',
 		children: [
 			{

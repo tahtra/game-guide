@@ -33,8 +33,7 @@
 						],
 						"tsConfig": "tsconfig.json",
 						"assets": [
-							"src/favicon.ico",
-							"src/assets"
+							"src/assets",
 						],
 						"styles": [
 							"src/styles/app.scss"
