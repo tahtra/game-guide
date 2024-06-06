@@ -1,9 +1,9 @@
 declare interface buildInterface {
 	name: string,
 	title: string,
-	worlplaces: number,
-	cost: materialInterface[],
+	workplaces: number,
+	cost: Array<materialInterface>,
 	specialization: Array<any> | null,
 	comfort: Array<any> | null,
-	products: materialInterface[]
+	products: Array<materialInterface>
 }

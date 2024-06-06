@@ -1,7 +1,34 @@
-<div>
+<div class="filter">
 	<input type="text">
 </div>
 
-<div>
+<div class="grid">
+	<div class="grid__header">Building</div>
+	<div class="grid__header">Workplaces</div>
+	<div class="grid__header">Cost</div>
+	<div class="grid__header">Specialization</div>
+	<div class="grid__header">Comfort</div>
+	<div class="grid__header">Products</div>
+
+	<ng-container *ngFor="let item of buildingsList">
+		<div>{{item.title}}</div>
+		<div>{{item.workplaces}}</div>
+		<div>
+			<ng-container *ngFor="let cost of item.cost">
+				<div class="cost">{{cost.count}} {{cost.name}}</div>
+			</ng-container>
+		</div>
+		<div>
+			<span *ngFor="let specialization of item.specialization">{{specialization}}</span>
+		</div>
+		<div>
+			<span *ngFor="let comfort of item.comfort">{{comfort}}</span>
+		</div>
+		<div>
+			<ng-container *ngFor="let products of item.products">
+				<div class="products">{{products.stars}} {{products.name}}</div>
+			</ng-container>
+		</div>
+	</ng-container>
 
 </div>

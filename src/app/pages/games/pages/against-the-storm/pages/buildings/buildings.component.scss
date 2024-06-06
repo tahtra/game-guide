@@ -1,0 +1,39 @@
+:host {
+	display:        flex;
+	flex-direction: column;
+	overflow:       auto;
+	gap:            20px;
+}
+
+.filter {
+
+}
+
+.grid {
+	display:               grid;
+	margin:                0 20px;
+	grid-template-columns: repeat(6, 1fr);
+	border:                1px solid #000000;
+	row-gap:               20px;
+	align-items:           center;
+	background-color:      lemonchiffon;
+
+	&__header {
+		display:          flex;
+		align-items:      center;
+		justify-content:  center;
+		height:           48px;
+		background-color: aliceblue;
+		border-bottom:    1px solid #000000;
+		border-right:     1px solid #000000;
+
+		&:nth-child(6n) {
+			border-right: none;
+		}
+	}
+
+	& > div {
+		padding: 0 12px;
+
+	}
+}

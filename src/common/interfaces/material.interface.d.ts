@@ -1,5 +1,5 @@
 declare interface materialInterface {
-	name: string,
+	name?: string,
 	title?: string,
 	stars?: number,
 	count?: number,

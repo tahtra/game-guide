@@ -3,7 +3,6 @@ import {RouterLink, RouterOutlet} from '@angular/router';
 
 
 @Component({
-	selector: 'app-against-the-storm',
 	standalone: true,
 	imports: [
 		RouterLink,
